@@ -1,0 +1,9 @@
+<h1>Write a review for <%= @restaurant.name %>  </h1>
+
+<%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <%= f.number_field :rating %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review", class: "btn btn-warning" %>
+<% end %>
+
+<%= link_to "Cancel", restaurants_path, class: "link-warning" %>
